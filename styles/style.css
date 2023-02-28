@@ -190,3 +190,10 @@ nav .brand-logo {
         top: 25px;
     }
 }
+
+ul a{
+    color: black;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
