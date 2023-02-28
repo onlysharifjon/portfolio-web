@@ -71,6 +71,10 @@ h5 {
 .section {
     padding-top: 2rem;
     padding-bottom: 2rem;
+    
+}
+.section ul a{
+    padding-left: 110px;
 }
 
 nav .brand-logo {
@@ -189,11 +193,7 @@ nav .brand-logo {
         left: -25px;
         top: 25px;
     }
-}
 
-ul a{
-    color: black;
-    display: flex;
-    align-items: center;
-    padding-left: 100px;
-}
+    .sectiontwo{
+        padding 100px;
+    }
