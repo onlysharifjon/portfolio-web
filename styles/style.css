@@ -1,0 +1,192 @@
+/* Add your custom CSS here */
+
+/*
+:root is a CSS pseudo-class (https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) that
+matches the root element of a document, which is <html> in HTML. This allows us to declare global
+CSS variables to store properties that can be accessed and reused by any element in the document.
+*/
+:root {
+    --black: #404040;
+    --primary-color: #587bf1; /* blue */
+    --primary-color-lighten-1: #b3e5fc;
+    --primary-color-darken-1: #ec7272;
+    --secondary-color: #383636; /* orange */
+    --secondary-color-lighten-1: #ff8a65;
+    --secondary-color-darken-1: #eeebeb;
+    --tertiary-color: #383636;
+    --primary-font: 'Playfair Display', serif;
+    --secondary-font: 'Josefin Sans', sans-serif;
+}
+
+
+/* ===== Materialize Overrides ===== */
+body,
+p,
+a,
+button {
+    font-family: 'Playfair Display', serif; /* IE fallback */
+    font-family: var(--primary-font);
+}
+
+body,
+p {
+    color: #404040;
+    color: var(--black);
+}
+
+/* Special styles for screens the size of a phone */
+@media (max-width: 375px) {
+    p {
+        font-size: 18px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Josefin Sans', sans-serif; /* IE fallback */
+    font-family: var(--secondary-font);
+}
+
+h5 {
+    line-height: 135%;
+}
+
+.btn,
+.btn-large,
+.btn-small {
+    background-color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+    font-family: var(--primary-font);
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+    background-color: var(--primary-color-darken-1);
+}
+
+.section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+nav .brand-logo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--secondary-font);
+    font-size: 1.6rem;
+}
+
+.logo-em {
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif; /* IE fallback */
+    font-family: var(--primary-font);
+    font-style: italic;
+    font-size: 1.9rem;
+}
+
+.card {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif; /* IE fallback */
+    font-family: var(--primary-font);
+}
+
+.card-title i {
+    color: var(--tertiary-color);
+}
+
+/* ===== /Materialize Overrides ===== */
+
+
+/* ===== Utility classes ===== */
+
+.primary-bg {
+    background-color: var(--primary-color);
+}
+
+.secondary-bg {
+    background-color: var(--secondary-color);
+}
+
+.primary-text {
+    color: var(--primary-color);
+}
+
+.primary-text-darken {
+    color: var(--primary-color-darken-1);
+}
+
+.secondary-text {
+    color: var(--secondary-color);
+}
+
+.secondary-text-darken {
+    color: var(--secondary-color-darken-1);
+}
+
+.no-shadow {
+    box-shadow: none;
+}
+
+/* ===== /Utility classes ===== */
+
+
+.cta-container {
+    background: linear-gradient(var(--secondary-color), var(--tertiary-color));
+    padding: 75px 0;
+}
+
+.custom-footer {
+    background: linear-gradient(rgb(#03001e, #7303C0, #ec38bc)) ;
+}
+
+#image-section-1 {
+    /* Set image and add light gradient overlay above image */
+    background: linear-gradient(0deg, rgb(255, 235, 59, 0.3), rgba(255, 112, 67, 0.3)), url("../images/christina-wocintechchat-com-unsplash-1.jpg");
+    background-size: cover;
+}
+
+#image-section-2 {
+    /* Set image and add light primary color overlay above image */
+    background: linear-gradient(0deg, rgb(129, 212, 250, 0.3), rgba(51, 49, 49, 0.3)), url("../images/christina-wocintechchat-com-unsplash-2.jpg");
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+
+.image-section {
+    height: 500px;
+}
+
+.quote-wrapper {
+    font-family: var(--primary-font);
+    padding: 50px 0;
+    position: relative;
+}
+
+.quote-wrapper i {
+    color: var(--secondary-color);
+    left: -35px;
+    top: 35px;
+    position: absolute;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+/* Special styles for screens the size of a phone */
+@media (max-width: 375px) {
+    .headshot {
+        max-width: 250px;
+    }
+
+    .quote-wrapper i {
+        left: -25px;
+        top: 25px;
+    }
+}
